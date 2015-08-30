@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>text</title>
+    <link rel="stylesheet" href="./css/darkula.css">
+    <script src="./js/highlight.pack.js"></script>
+</head>
+<body>
+    <pre>
+        <code>
+            function a() {
+                var count = 0;
+                for(var i = 0; i < 3; i++) {
+                    count++;
+                }
+            }
+        </code>
+    </pre>
+<script>
+    function highLightCode(){
+        var codeBlock =document.querySelectorAll('code');
+        for(var i = codeBlock.length-1;i>=0;i--){
+            hljs.highlightBlock(codeBlock[i].parentNode);
+            console.log(codeBlock[i].parentNode);
+        }
+    }
+highLightCode();
+</script>
+</body>
+</html>
